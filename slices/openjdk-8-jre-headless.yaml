@@ -12,6 +12,7 @@ slices:
       - libgcc-s1_libs
       - libpcsclite1_libs
       - libstdc++6_libs
+      - ca-certificates-java_data
     contents:
       /etc/java-8-openjdk/security/java.security:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/security/java.policy:
@@ -43,6 +44,7 @@ slices:
       - libc6_libs
       - libfontconfig1_libs
       - libfreetype6_libs
+      - libjpeg-turbo8_libs
     contents:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libawt.so:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libawt_headless.so:
@@ -105,6 +107,7 @@ slices:
       - libgcc-s1_libs
       - libstdc++6_libs
       - zlib1g_libs
+      - media-types_data
     contents:
       /etc/java-8-openjdk/calendars.properties:
       /etc/java-8-openjdk/content-types.properties:
