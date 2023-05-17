@@ -92,33 +92,6 @@ slices:
       /etc/java-8-openjdk/management/management.properties:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/management/management.properties:
 
-# debugging and profiling
-  devel:
-    essential:
-
-# never-install slice
-  accessibility:
-    contents:
-      /etc/java-8-openjdk/accessibility.properties:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/accessibility.properties:
-
-# never-install slice - it is a stub.
-# openjdk is not compiled with dtrace enabled
-  dtrace:
-    essential:
-      - openjdk-8-jre-headless_core
-    contents:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjsdt.so:
-
-# native part support of jcmd/debugger clients - allows to attach to the target
-# vm. do not install slice
-  attach:
-    essential:
-      - openjdk-8-jre-headless_core
-    contents:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libattach.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libsaproc.so:
-
   hprof:
     essential:
       - openjdk-8-jre-headless_core
@@ -166,7 +139,6 @@ slices:
     contents:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/cldrdata.jar:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/localedata.jar:
-
 
   # allows to query dns records through JNDI
   jndidns:
