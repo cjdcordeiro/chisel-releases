@@ -1,10 +1,20 @@
 package: openjdk-8-jre-headless
 
+# Proposed chiselled jre contents:
+# - openjdk-8-jre-headless_core
+# - openjdk-8-jre-headless_management
+# - openjdk-8-jre-headless_hprof
+# - openjdk-8-jre-headless_jfr
+# - openjdk-8-jre-headless_debug
+# - openjdk-8-jre-headless_jplis (optional, specific use-case - jvm language agent)
+# - openjdk-8-jre-headless_locale
+# - openjdk-8-jre-headless_jndidns(optional, specific use-case)
+# - openjdk-8-jre-headless_zipfs(optional, specific use-case)
+# - openjdk-8-jre-headless_stcp(optional, specific use-case)
+# - openjdk-8-jre-headless_security
+# - openjdk-8-jre-headless_awt
+
 slices:
-  accessibility:
-    contents:
-      /etc/java-8-openjdk/accessibility.properties:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/accessibility.properties:
 
   security:
     essential:
@@ -85,21 +95,99 @@ slices:
 # debugging and profiling
   devel:
     essential:
-      - libc6_libs
-      - libgcc-s1_libs
-      - libstdc++6_libs
+
+# never-install slice
+  accessibility:
+    contents:
+      /etc/java-8-openjdk/accessibility.properties:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/accessibility.properties:
+
+# never-install slice - it is a stub.
+# openjdk is not compiled with dtrace enabled
+  dtrace:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjsdt.so:
+
+# native part support of jcmd/debugger clients - allows to attach to the target
+# vm. do not install slice
+  attach:
+    essential:
+      - openjdk-8-jre-headless_core
     contents:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libattach.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libdt_socket.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libhprof.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libinstrument.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjava_crw_demo.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjdwp.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjsdt.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libnpt.so:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libsaproc.so:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libsctp.so:
+
+  hprof:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      # utf8 conversions used by profiler and debugger
+      # jwdp agent and hprof agent
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libnpt.so:
+      # profiler library itself
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libhprof.so:
+      # profiling instrumentation
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjava_crw_demo.so:
+
+  # java wire debugging protocol agent
+  debug:
+    essential:
+    - openjdk-8-jre-headless_core
+    contents:
+      # debug agent
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libjdwp.so:
+      # transport protocol
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libdt_socket.so:
+      # utf8 conversions used by profiler and debugger
+      # jwdp agent and hprof agent
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libnpt.so:
+
+  # https://bugs.openjdk.org/browse/JDK-4882798
+  jplis:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libinstrument.so:
+
+  # java flight recorder
+  # depends on jdk.internal. (rt.jar)
+  # depends on nio
+  jfr:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/jfr.jar:
+
+  locale:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/cldrdata.jar:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/localedata.jar:
+
+
+  # allows to query dns records through JNDI
+  jndidns:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/dnsns.jar:
+
+  zipfs:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/zipfs.jar:
+
+  # 30 kb native part of the com.sun.nio.sctp private api in rt.jar
+  # no internal usages in jre
+  stcp:
+    essential:
+      - openjdk-8-jre-headless_core
+    contents:
+      /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/libsctp.so:
 
   core:
     essential:
@@ -114,10 +202,6 @@ slices:
       /etc/java-8-openjdk/logging.properties:
       /etc/java-8-openjdk/net.properties:
       /etc/java-8-openjdk/sound.properties:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/cldrdata.jar:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/dnsns.jar:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/localedata.jar:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/ext/zipfs.jar:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/meta-index:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/resources.jar:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/rt.jar:
@@ -135,7 +219,6 @@ slices:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/content-types.properties:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/logging.properties:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/net.properties:
-      /usr/lib/jvm/java-8-openjdk-*/jre/lib/sound.properties:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/*/jvm.cfg-default:
       /etc/java-8-openjdk/security/java.policy:
       /usr/lib/jvm/java-8-openjdk-*/jre/lib/currency.data:
