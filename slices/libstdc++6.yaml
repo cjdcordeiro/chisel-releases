@@ -6,4 +6,5 @@ slices:
       - libc6_libs
       - libgcc-s1_libs
     contents:
-      /usr/lib/*-linux-*/libstdc++.so.*:
+      # There is not copyright for this pkg
+      /usr/lib/*-linux-*/libstdc++.so*:

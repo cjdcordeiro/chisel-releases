@@ -1,8 +1,5 @@
 package: base-files
 
-essential:
-  - base-files_copyright
-
 slices:
   base:
     essential:
@@ -33,6 +30,7 @@ slices:
 
   tmp:
     contents:
+      # There is a copyright for this pkg
       /tmp/:
 
   var:
@@ -65,7 +63,3 @@ slices:
       /etc/lsb-release:
       /etc/os-release:
       /usr/lib/os-release:
-
-  copyright:
-    contents:
-      /usr/share/doc/base-files/copyright:
