@@ -10,4 +10,7 @@ slices:
 
   copyright:
     contents:
-      /usr/share/doc/readline-common/copyright:
+      /usr/share/doc/readline-common/copyright: {until: mutate}
+      # This copyright exists, but let's delete it from the installation
+    mutate: |
+      test = content.read("/usr/share/doc/readline-common/copyright")
