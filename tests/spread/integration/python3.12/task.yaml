@@ -1,0 +1,4 @@
+summary: Integration tests for Python3.12
+
+execute: |
+  ls
