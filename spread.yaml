@@ -6,7 +6,7 @@ environment:
   PROJECT_PATH: /chisel-releases
   SHARED_LIBRARIES: $PROJECT_PATH/tests/spread/lib
   PATH: /snap/bin:$PATH:$SHARED_LIBRARIES
-  
+
 exclude:
   - .github
 
@@ -28,8 +28,7 @@ backends:
         /usr/sbin/sshd -D
       '
       ADDRESS `docker inspect $SPREAD_SYSTEM --format '{{.NetworkSettings.Networks.bridge.IPAddress}}'`
-    discard:
-      docker rm -f $SPREAD_SYSTEM
+    discard: docker rm -f $SPREAD_SYSTEM
     systems:
       - ubuntu-22.04-amd64:
           password: ubuntu
@@ -42,7 +41,7 @@ backends:
       - ubuntu-22.04-s390x:
           password: ubuntu
       - ubuntu-22.04-riscv64:
-          password: ubuntu         
+          password: ubuntu
 
 prepare: |
   # Deb arch to GOARCH
@@ -58,6 +57,8 @@ prepare: |
 
   tar -xf $chisel_tar -C /usr/local/bin
 
+prepare-each:
+  chisel version
 
 suites:
   tests/spread/integration/:
