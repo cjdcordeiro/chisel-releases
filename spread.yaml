@@ -17,7 +17,7 @@ backends:
       echo "Allocating $SPREAD_SYSTEM..."
       docker_image=$(echo $SPREAD_SYSTEM | awk -F '-' '{print $1":"$2}')
       docker_arch=$(echo $SPREAD_SYSTEM | awk -F '-' '{print $NF}')
-      docker run -e usr=$SPREAD_SYSTEM_USERNAME -e pass=$SPREAD_SYSTEM_PASSWORD \
+      docker run --rm -e usr=$SPREAD_SYSTEM_USERNAME -e pass=$SPREAD_SYSTEM_PASSWORD \
         --name $SPREAD_SYSTEM -d $docker_arch/$docker_image sh -c '
         set -x
         apt update
@@ -30,17 +30,17 @@ backends:
       ADDRESS `docker inspect $SPREAD_SYSTEM --format '{{.NetworkSettings.Networks.bridge.IPAddress}}'`
     discard: docker rm -f $SPREAD_SYSTEM
     systems:
-      - ubuntu-22.04-amd64:
+      - ubuntu-24.04-amd64:
           password: ubuntu
-      - ubuntu-22.04-arm64v8:
+      - ubuntu-24.04-arm64v8:
           password: ubuntu
-      - ubuntu-22.04-arm32v7:
+      - ubuntu-24.04-arm32v7:
           password: ubuntu
-      - ubuntu-22.04-ppc64le:
+      - ubuntu-24.04-ppc64le:
           password: ubuntu
-      - ubuntu-22.04-s390x:
+      - ubuntu-24.04-s390x:
           password: ubuntu
-      - ubuntu-22.04-riscv64:
+      - ubuntu-24.04-riscv64:
           password: ubuntu
 
 prepare: |
