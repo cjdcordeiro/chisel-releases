@@ -45,7 +45,7 @@ backends:
 
 prepare: |
   # Deb arch to GOARCH
-  arch="$(dpkg --print-architecture | sed -e 's/armhf/arm/g' -e 's/ppc64le/ppc64el/g')"
+  arch="$(dpkg --print-architecture | sed -e 's/armhf/arm/g')"
   chisel_tar="chisel.tar.gz"
 
   apt install -y curl wget
