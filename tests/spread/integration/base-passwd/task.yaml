@@ -1,0 +1,13 @@
+summary: Integration tests for base-passwd
+
+execute: |
+  rootfs="$(install-slices base-passwd_data"
+
+  test -f /etc/group
+  ! grep FIXME /etc/group
+
+  test -f /etc/passwd
+  ! grep FIXME /etc/passwd
+
+  test ! -f /usr/share/base-passwd/group.master
+  test ! -f /usr/share/base-passwd/passwd.master
