@@ -1,6 +1,5 @@
 package: libc6
 
-# TEST
 essential:
   - libc6_copyright
 
@@ -17,6 +16,7 @@ slices:
       # and as such, we create this explicit dependency between the two slices.
       # Ref: https://github.com/canonical/chisel-releases/pull/171
       - base-files_lib
+      - libgcc-s1_libs
     contents:
       /usr/lib*/ld*.so.*:
       /usr/lib/*-linux-*/ld*.so.*:
