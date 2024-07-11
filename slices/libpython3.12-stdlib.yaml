@@ -15,6 +15,7 @@ slices:
     essential:
       - libbz2-1.0_libs
       - libc6_libs
+      - libgcc-s1_libs
       - liblzma5_libs
       - libpython3.12-minimal_libs
       - media-types_data
