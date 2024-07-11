@@ -40,8 +40,9 @@ backends:
           password: ubuntu
       - ubuntu-24.04-s390x:
           password: ubuntu
-      - ubuntu-24.04-riscv64:
-          password: ubuntu
+      # Re-enable risvc64 once we have re-enabled this arch for the Ubuntu container
+      # - ubuntu-24.04-riscv64:
+      #     password: ubuntu
 
 prepare: |
   # Deb arch to GOARCH
