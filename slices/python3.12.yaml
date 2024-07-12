@@ -1,5 +1,6 @@
 package: python3.12
 
+# TEST
 essential:
   - python3.12_copyright
 
