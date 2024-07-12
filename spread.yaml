@@ -17,7 +17,8 @@ backends:
       echo "Allocating $SPREAD_SYSTEM..."
       docker_image=$(echo $SPREAD_SYSTEM | awk -F '-' '{print $1":"$2}')
       docker_arch=$(echo $SPREAD_SYSTEM | awk -F '-' '{print $NF}')
-      docker run --rm -e usr=$SPREAD_SYSTEM_USERNAME -e pass=$SPREAD_SYSTEM_PASSWORD \
+      docker run --rm -e DEBIAN_FRONTEND=noninteractice \
+        -e usr=$SPREAD_SYSTEM_USERNAME -e pass=$SPREAD_SYSTEM_PASSWORD \
         --name $SPREAD_SYSTEM -d $docker_arch/$docker_image sh -c '
         set -x
         apt update
@@ -27,6 +28,13 @@ backends:
         echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
         /usr/sbin/sshd -D
       '
+      # The container will be up really fast, but the CMD might take time to
+      # run, and Spread will timeout the SSH op after 5 min. So we wait for the
+      # container during the allocation script.
+      until docker exec $SPREAD_SYSTEM pgrep sshd
+      do
+        sleep 5
+      done
       ADDRESS `docker inspect $SPREAD_SYSTEM --format '{{.NetworkSettings.Networks.bridge.IPAddress}}'`
     discard: docker rm -f $SPREAD_SYSTEM
     systems:
