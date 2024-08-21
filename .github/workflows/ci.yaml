@@ -22,4 +22,4 @@ jobs:
 
   integration-tests:
     name: Integration tests
-    uses: canonical/chisel-releases/.github/workflows/spread.yaml@main
+    uses: cjdcordeiro/chisel-releases/.github/workflows/spread.yaml@main
