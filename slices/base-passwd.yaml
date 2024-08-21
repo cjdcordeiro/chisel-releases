@@ -3,6 +3,7 @@ package: base-passwd
 essential:
   - base-passwd_copyright
 
+
 slices:
   data:
     contents:
