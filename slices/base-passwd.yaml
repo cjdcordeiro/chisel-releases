@@ -3,7 +3,6 @@ package: base-passwd
 essential:
   - base-passwd_copyright
 
-
 slices:
   data:
     contents:
@@ -13,7 +12,7 @@ slices:
       /usr/share/base-passwd/passwd.master: {until: mutate}
     mutate: |
       gr = content.read("/usr/share/base-passwd/group.master")
-      content.write("/etc/group", gr)
+      content.write("/etc/group ", gr)
       pw = content.read("/usr/share/base-passwd/passwd.master")
       content.write("/etc/passwd", pw)
 
