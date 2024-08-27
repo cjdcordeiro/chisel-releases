@@ -1,5 +1,6 @@
 package: base-passwd
 
+# test this
 essential:
   - base-passwd_copyright
 
