@@ -8,10 +8,7 @@ slices:
   # files provided also by the package.
   bins:
     essential:
-      - libacl1_libs
-      - libattr1_libs
       - libaudit1_libs
-      - libbsd0_libs
       - libc6_libs
       - libcrypt1_libs
       - libpam-modules_libs
@@ -32,12 +29,7 @@ slices:
       /usr/sbin/cppw:
       /usr/sbin/groupadd:
       /usr/sbin/groupdel:
-      # groupmems is no longer present in the latest deb. Unsure whether this
-      # is intentional. The passwd package installed in ubuntu:24.10 docker
-      # image does contain the file. However, the installed package is of a
-      # lower version.
-      # TODO uncomment if and once the file is included in the latest version.
-      # /usr/sbin/groupmems:
+      /usr/sbin/groupmems:
       /usr/sbin/groupmod:
       /usr/sbin/grpck:
       /usr/sbin/grpconv:

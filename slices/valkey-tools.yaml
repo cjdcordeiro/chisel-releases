@@ -1,0 +1,38 @@
+package: valkey-tools
+
+essential:
+  - valkey-tools_copyright
+
+slices:
+  core:
+    essential:
+      - valkey-tools_bins
+    contents:
+      /var/log/valkey/: {make: true, mode: 2750}
+      /var/lib/valkey/: {make: true, mode: 0750}
+      /etc/valkey/: {make: true, mode: 2770}
+
+  bins:
+    essential:
+      - libatomic1_libs
+      - libc6_libs
+      - libjemalloc2_libs
+      - liblzf1_libs
+      - libssl3t64_libs
+      - libsystemd0_libs
+      - zlib1g_libs
+    contents:
+      /usr/bin/valkey-benchmark:
+      /usr/bin/valkey-check-aof:
+      /usr/bin/valkey-check-rdb:
+      /usr/bin/valkey-cli:
+
+  bash-completion:
+    essential:
+      - valkey-tools_bins
+    contents:
+      /usr/share/bash-completion/completions/valkey-cli:
+
+  copyright:
+    contents:
+      /usr/share/doc/valkey-tools/copyright:

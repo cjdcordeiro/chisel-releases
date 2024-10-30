@@ -1,0 +1,22 @@
+package: valkey-server
+
+essential:
+  - valkey-server_copyright
+
+slices:
+  conf:
+    contents:
+      /etc/logrotate.d/valkey-server:
+      /etc/default/valkey-server:
+      /etc/valkey/valkey.conf:
+  bins:
+    essential:
+      - valkey-tools_bins
+      - valkey-server_conf
+    contents:
+      /etc/init.d/valkey-server:
+      /usr/bin/valkey-server:
+
+  copyright:
+    contents:
+      /usr/share/doc/valkey-server/copyright:
