@@ -1,0 +1,12 @@
+name: conventional
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  check-for-cc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-for-cc
+        id: check-for-cc
+        uses: aevea/commitsar@v0.20.2
