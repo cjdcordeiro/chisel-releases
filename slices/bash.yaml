@@ -4,7 +4,7 @@ slices:
   config:
     contents:
       /etc/bash.bashrc:
-      /bad/path:
+      /badpath:
       /etc/skel/.bash_logout:
       /etc/skel/.bashrc:
       /etc/skel/.profile:
