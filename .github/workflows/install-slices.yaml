@@ -1,5 +1,5 @@
 name: Install slices
-
+# test install all-slices
 on:
   push:
     branches:
