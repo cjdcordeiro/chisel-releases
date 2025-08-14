@@ -15,7 +15,7 @@ jobs:
 
   installability-tests:
     name: Installability tests
-    uses: cjdcordeiro/chisel-releases/.github/workflows/install-slices.yaml@main
+    uses: cjdcordeiro/chisel-releases/.github/workflows/install-slices.yaml@main-tests
 
   lint:
     name: Lint
