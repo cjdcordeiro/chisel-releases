@@ -4,7 +4,7 @@ on:
   # Using a schedule because events like pull_request only work if the workflow
   # exists on the base (target) branch of the PR
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 jobs:
@@ -14,12 +14,12 @@ jobs:
     steps:
       - env:
           GITHUB_TOKEN: ${{ secrets.ROCKSBOT_PR_TOKEN }}
-          REVIEWERS: "canonical/slice-reviewers-guild"
+          REVIEWERS: "slice-reviewers-guild"
         run: |
           set -euxo pipefail
           
           for pr_number in `gh pr list -R ${{ github.repository }} \
-            --search "-team-review-requested:${{ env.REVIEWERS }}" --json number | jq -e '.[].number' \
+            --search "-team-review-requested:canonical/${{ env.REVIEWERS }}" --json number | jq -e '.[].number' \
             || echo fail`
             do
               if [[ "$pr_number" == "fail" ]]
