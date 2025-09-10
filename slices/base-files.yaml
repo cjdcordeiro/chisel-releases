@@ -1,6 +1,6 @@
 package: base-files
 
-# test
+# test 2
 essential:
   - base-files_copyright
 
