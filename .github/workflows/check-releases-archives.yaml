@@ -51,4 +51,7 @@ jobs:
       - name: Check archives for ${{ matrix.ref }} on ${{ matrix.arch }}
         run: |
           set -ex
-          chisel debug check-release-archives --arch ${{ matrix.arch }} --release ${{ matrix.ref }}
+          git clone https://github.com/cjdcordeiro/chisel-releases
+          cd chisel-releases
+          git switch ${{ matrix.ref }} 
+          chisel debug check-release-archives --arch ${{ matrix.arch }} --release ./
