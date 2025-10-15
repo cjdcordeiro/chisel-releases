@@ -19,7 +19,7 @@ runs:
     - shell: bash
       id: get-maintained-releases
       env:
-        CR_REPO: "https://github.com/canonical/chisel-releases"
+        CR_REPO: "https://github.com/cjdcordeiro/chisel-releases"
       run: |
         set -x
 
