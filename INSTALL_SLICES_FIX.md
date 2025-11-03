@@ -105,39 +105,63 @@ The fix has been designed to:
 
 ## Applying the Fix
 
-### Option 1: Use the Provided Patches (Recommended)
+The fix needs to be applied to the `tests/spread/lib/install-slices` file on each Ubuntu release branch. The reference implementation is available in this branch at `tests/spread/lib/install-slices`.
 
-Patch files for all branches are available in `patches/install-slices-retry-fix/`:
+### Apply to Each Branch
+
+For each Ubuntu release branch, replace the file content with the fixed version:
 
 ```bash
-# Apply to a single branch (e.g., ubuntu-24.04)
+# Example for ubuntu-24.04
 git checkout ubuntu-24.04
-git am patches/install-slices-retry-fix/ubuntu-24.04.patch
 
-# Or apply to all branches
-for branch in ubuntu-20.04 ubuntu-22.04 ubuntu-24.04 ubuntu-24.10 ubuntu-25.04 ubuntu-25.10; do
-    git checkout "$branch"
-    git am "patches/install-slices-retry-fix/${branch}.patch"
+# Replace the file with the fixed version
+cat > tests/spread/lib/install-slices << 'EOF'
+#!/bin/bash -ex
+
+# Installs one or more slices into a dynamically created temporary path.
+# Usage: install-slices [<slice>...]
+# Returns the path of the chiselled rootfs
+
+tmpdir="$(mktemp -d)"
+echo "${tmpdir}"
+
+max_attempts=3
+attempt=1
+fetch_error="error: cannot fetch from archive"
+
+while [ $attempt -le $max_attempts ]; do
+    output=$(chisel cut --release "$PROJECT_PATH" --root "$tmpdir" "$@" 2>&1)
+    exit_code=$?
+    
+    if [ $exit_code -eq 0 ]; then
+        exit 0
+    fi
+    
+    # Check if it's a fetch error that we should retry
+    if echo "$output" | grep -q "$fetch_error"; then
+        if [ $attempt -lt $max_attempts ]; then
+            echo "Fetch error on attempt $attempt/$max_attempts, retrying..." >&2
+            ((attempt++))
+            continue
+        fi
+    fi
+    
+    # If we get here, either it's not a fetch error or we're out of retries
+    echo "$output" >&2
+    exit $exit_code
 done
+EOF
+
+# Ensure executable
+chmod +x tests/spread/lib/install-slices
+
+# Commit
+git add tests/spread/lib/install-slices
+git commit -m "ci: add retry mechanism to install-slices helper in spread tests"
 ```
 
-See `patches/install-slices-retry-fix/README.md` for detailed instructions.
-
-### Option 2: Manual Application
-
-1. For each branch, create a PR from `<branch>-install-slices-fix` to `<branch>`
-2. Example for ubuntu-24.04:
-   - Source: `ubuntu-24.04-install-slices-fix`
-   - Target: `ubuntu-24.04`
-   - Title: "ci: add retry mechanism to install-slices helper in spread tests"
-
-### Option 3: Using the Helper Script
-
-Run the provided script to apply the fix to all branches:
-
-```bash
-.github/scripts/apply-install-slices-fix.sh
-```
+Repeat for all branches: ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-24.10, ubuntu-25.04, ubuntu-25.10
 
 ## References
 
