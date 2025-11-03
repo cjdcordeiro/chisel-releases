@@ -1,0 +1,34 @@
+#!/bin/bash -ex
+
+# Installs one or more slices into a dynamically created temporary path.
+# Usage: install-slices [<slice>...]
+# Returns the path of the chiselled rootfs
+
+tmpdir="$(mktemp -d)"
+echo "${tmpdir}"
+
+max_attempts=3
+attempt=1
+fetch_error="error: cannot fetch from archive"
+
+while [ $attempt -le $max_attempts ]; do
+    output=$(chisel cut --release "$PROJECT_PATH" --root "$tmpdir" "$@" 2>&1)
+    exit_code=$?
+    
+    if [ $exit_code -eq 0 ]; then
+        exit 0
+    fi
+    
+    # Check if it's a fetch error that we should retry
+    if echo "$output" | grep -q "$fetch_error"; then
+        if [ $attempt -lt $max_attempts ]; then
+            echo "Fetch error on attempt $attempt/$max_attempts, retrying..." >&2
+            ((attempt++))
+            continue
+        fi
+    fi
+    
+    # If we get here, either it's not a fetch error or we're out of retries
+    echo "$output" >&2
+    exit $exit_code
+done
