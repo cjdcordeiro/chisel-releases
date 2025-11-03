@@ -23,7 +23,7 @@ while [ $attempt -le $max_attempts ]; do
     if echo "$output" | grep -q "$fetch_error"; then
         if [ $attempt -lt $max_attempts ]; then
             echo "Fetch error on attempt $attempt/$max_attempts, retrying..." >&2
-            ((attempt++))
+            attempt=$((attempt + 1))
             continue
         fi
     fi
