@@ -103,9 +103,27 @@ The fix has been designed to:
 - Only add retry logic for the specific error case
 - Preserve all existing functionality
 
-## Next Steps
+## Applying the Fix
 
-To merge these changes:
+### Option 1: Use the Provided Patches (Recommended)
+
+Patch files for all branches are available in `patches/install-slices-retry-fix/`:
+
+```bash
+# Apply to a single branch (e.g., ubuntu-24.04)
+git checkout ubuntu-24.04
+git am patches/install-slices-retry-fix/ubuntu-24.04.patch
+
+# Or apply to all branches
+for branch in ubuntu-20.04 ubuntu-22.04 ubuntu-24.04 ubuntu-24.10 ubuntu-25.04 ubuntu-25.10; do
+    git checkout "$branch"
+    git am "patches/install-slices-retry-fix/${branch}.patch"
+done
+```
+
+See `patches/install-slices-retry-fix/README.md` for detailed instructions.
+
+### Option 2: Manual Application
 
 1. For each branch, create a PR from `<branch>-install-slices-fix` to `<branch>`
 2. Example for ubuntu-24.04:
@@ -113,7 +131,13 @@ To merge these changes:
    - Target: `ubuntu-24.04`
    - Title: "ci: add retry mechanism to install-slices helper in spread tests"
 
-Alternatively, the changes can be cherry-picked directly to each release branch.
+### Option 3: Using the Helper Script
+
+Run the provided script to apply the fix to all branches:
+
+```bash
+.github/scripts/apply-install-slices-fix.sh
+```
 
 ## References
 
