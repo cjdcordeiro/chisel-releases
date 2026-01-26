@@ -3,4 +3,5 @@ summary: Integration tests for python3-yaml
 execute: |
   rootfs="$(install-slices python3-yaml_libs)"
 
-  chroot "${rootfs}" python3 -c "import yaml" >/dev/null
+  cp test.py "${rootfs}/test.py"
+  chroot ${rootfs} python3 /test.py >/dev/null
