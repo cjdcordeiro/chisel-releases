@@ -7,6 +7,7 @@ slices:
   # The "core" slice provides a very minimal, yet functioning python3.12.
   # It includes very few modules from the libpython3.12-stdlib package.
   core:
+    hint: Minimal, yet functional Python 3.12
     essential:
       - libpython3.12-stdlib_core
       - media-types_data
@@ -15,6 +16,7 @@ slices:
   # The "standard" slice extends "core" with all the Python
   # modules from the libpython3.12-stdlib package.
   standard:
+    hint: "All the Python modules from stdlib"
     essential:
       - libpython3.12-stdlib_aix-support
       - libpython3.12-stdlib_all-os
@@ -47,6 +49,7 @@ slices:
 
   # The "utlis" slice extends "core" with various tools.
   utils:
+    hint: Tools
     essential:
       - libpython3.12-stdlib_debug
       - libpython3.12-stdlib_pydoc
