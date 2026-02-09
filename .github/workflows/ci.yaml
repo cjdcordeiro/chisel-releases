@@ -18,7 +18,7 @@ jobs:
 
   lint:
     name: Lint
-    uses: canonical/chisel-releases/.github/workflows/lint.yaml@main
+    uses: cjdcordeiro/chisel-releases/.github/workflows/lint.yaml@main
 
   integration-tests:
     name: Integration tests
