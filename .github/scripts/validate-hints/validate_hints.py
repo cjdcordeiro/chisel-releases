@@ -67,8 +67,7 @@ def no_special_characters(text: str) -> Optional[ErrorMessage]:
 
     bad_chars = re.findall(forbidden_pattern, text)
     if bad_chars:
-        # Sort and unique for deterministic output
-        unique_bad_chars = sorted(set(bad_chars))
+        unique_bad_chars = set(bad_chars)
         return (
             f"can only contain alphanumeric characters, periods, commas, "
             f"semicolons, parentheses: found {', '.join(unique_bad_chars)}"
@@ -118,8 +117,9 @@ def validate_hints(file_path: str) -> List[str]:
             content = yaml.safe_load(f)
     except Exception as e:
         return [f"File={file_path}, Error=Failed to parse YAML: {e}"]
-
-    if not content or "slices" not in content:
+    
+    slices = content.get("slices", {})
+    if not isinstance(slices, dict):
         return []
 
     validators = [
@@ -129,10 +129,6 @@ def validate_hints(file_path: str) -> List[str]:
         no_trailing_punctuation,
         is_sentence_case,
     ]
-
-    slices = content.get("slices", {})
-    if not isinstance(slices, dict):
-        return []
 
     for slice_name, values in slices.items():
         if not isinstance(values, dict):
