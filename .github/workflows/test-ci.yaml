@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
     paths:
-      - ".github/workflows/validate-hints.yaml"
+      - ".github/workflows/*.yaml"
       - ".github/scripts/validate-hints/**"
 
 jobs:
