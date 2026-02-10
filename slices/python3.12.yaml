@@ -49,7 +49,7 @@ slices:
 
   # The "utlis" slice extends "core" with various tools.
   utils:
-    hint: Tools
+    hint: Tools. but not sentence case and end with a dot.
     essential:
       - libpython3.12-stdlib_debug
       - libpython3.12-stdlib_pydoc
