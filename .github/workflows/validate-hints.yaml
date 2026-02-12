@@ -7,6 +7,8 @@ jobs:
   validate:
     name: Validate slice definition hints
     runs-on: ubuntu-latest
+
+    # Needs to be called, from a workflow triggered by a PR
     if: |
       startswith(github.event_name, 'pull_request') &&
       startswith(github.base_ref, 'ubuntu-')
@@ -20,7 +22,7 @@ jobs:
 
       - name: Check changed paths
         id: changed-paths
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         with:
           # ref: https://github.com/marketplace/actions/paths-changes-filter
           filters: |
@@ -38,10 +40,10 @@ jobs:
           path: ${{ env.main-branch-path }}
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-          pip-install: "${{ env.main-branch-path }}/.github/scripts/validate-hints/requirements.txt"
+          pip-install: -r ${{ env.main-branch-path }}/.github/scripts/validate-hints/requirements.txt
 
       - name: Validate hints
         env:
