@@ -62,6 +62,7 @@ class TestValidators:
         assert validate_hints.no_trailing_punctuation("Ends with parenthesis)") is None
 
         # Invalid
+
         for punct in {".", "!", "?", ",", ";", ":", " "}:
             assert (
                 validate_hints.no_trailing_punctuation(f"Ends with {punct}") is not None

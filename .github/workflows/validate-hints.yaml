@@ -7,6 +7,7 @@ jobs:
   check-changed-files:
     name: Prepare files to be validated
     runs-on: ubuntu-latest
+
     # Needs to be called, from a workflow triggered by a PR
     if: |
       startswith(github.event_name, 'pull_request') &&
