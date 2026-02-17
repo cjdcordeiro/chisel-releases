@@ -1,5 +1,5 @@
 name: Test chisel-releases CI
-# test ci workflow
+# test workflow
 on:
   pull_request:
     branches:
