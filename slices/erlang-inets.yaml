@@ -1,7 +1,7 @@
 package: erlang-inets
 
 essential:
-  erlang-inets_copyright: {}
+  erlang-inets_copyright:
 
 slices:
   scripts:

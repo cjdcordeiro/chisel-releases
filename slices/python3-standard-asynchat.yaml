@@ -1,7 +1,7 @@
 package: python3-standard-asynchat
 
 essential:
-  python3-standard-asynchat_copyright: {}
+  python3-standard-asynchat_copyright:
 
 slices:
   libs:

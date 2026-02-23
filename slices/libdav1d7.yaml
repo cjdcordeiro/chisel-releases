@@ -1,7 +1,7 @@
 package: libdav1d7
 
 essential:
-  libdav1d7_copyright: {}
+  libdav1d7_copyright:
 
 slices:
   libs:

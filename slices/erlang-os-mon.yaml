@@ -1,7 +1,7 @@
 package: erlang-os-mon
 
 essential:
-  erlang-os-mon_copyright: {}
+  erlang-os-mon_copyright:
 
 slices:
   bins:

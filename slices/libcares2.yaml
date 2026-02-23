@@ -1,7 +1,7 @@
 package: libcares2
 
 essential:
-  libcares2_copyright: {}
+  libcares2_copyright:
 
 slices:
   libs:

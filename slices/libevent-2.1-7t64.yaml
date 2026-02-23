@@ -1,7 +1,7 @@
 package: libevent-2.1-7t64
 
 essential:
-  libevent-2.1-7t64_copyright: {}
+  libevent-2.1-7t64_copyright:
 
 slices:
   libs:

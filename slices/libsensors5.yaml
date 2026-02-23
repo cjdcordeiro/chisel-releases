@@ -1,7 +1,7 @@
 package: libsensors5
 
 essential:
-  libsensors5_copyright: {}
+  libsensors5_copyright:
 
 slices:
   libs:

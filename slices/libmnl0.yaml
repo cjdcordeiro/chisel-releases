@@ -1,7 +1,7 @@
 package: libmnl0
 
 essential:
-  libmnl0_copyright: {}
+  libmnl0_copyright:
 
 slices:
   libs:

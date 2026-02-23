@@ -1,7 +1,7 @@
 package: libbsd0
 
 essential:
-  libbsd0_copyright: {}
+  libbsd0_copyright:
 
 slices:
   libs:

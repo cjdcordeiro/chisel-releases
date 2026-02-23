@@ -1,7 +1,7 @@
 package: erlang-parsetools
 
 essential:
-  erlang-parsetools_copyright: {}
+  erlang-parsetools_copyright:
 
 slices:
   modules:

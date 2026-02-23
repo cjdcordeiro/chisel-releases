@@ -1,7 +1,7 @@
 package: libsratom-0-0
 
 essential:
-  libsratom-0-0_copyright: {}
+  libsratom-0-0_copyright:
 
 slices:
   libs:

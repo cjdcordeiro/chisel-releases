@@ -1,7 +1,7 @@
 package: libnss-extrausers
 
 essential:
-  libnss-extrausers_copyright: {}
+  libnss-extrausers_copyright:
 
 slices:
   libs:

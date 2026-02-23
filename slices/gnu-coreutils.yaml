@@ -1,7 +1,7 @@
 package: gnu-coreutils
 
 essential:
-  gnu-coreutils_copyright: {}
+  gnu-coreutils_copyright:
 
 # The gnu-coreutils package contains three standard data slices:
 #   - libs: contains all shared object files.

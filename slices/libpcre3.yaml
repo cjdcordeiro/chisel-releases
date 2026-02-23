@@ -1,7 +1,7 @@
 package: libpcre3
 
 essential:
-  libpcre3_copyright: {}
+  libpcre3_copyright:
 
 slices:
   libs:

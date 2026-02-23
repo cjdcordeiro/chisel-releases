@@ -1,7 +1,7 @@
 package: libargon2-1
 
 essential:
-  libargon2-1_copyright: {}
+  libargon2-1_copyright:
 
 slices:
   libs:

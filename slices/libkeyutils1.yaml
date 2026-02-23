@@ -1,7 +1,7 @@
 package: libkeyutils1
 
 essential:
-  libkeyutils1_copyright: {}
+  libkeyutils1_copyright:
 
 slices:
   libs:

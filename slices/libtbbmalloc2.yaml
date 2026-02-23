@@ -1,7 +1,7 @@
 package: libtbbmalloc2
 
 essential:
-  libtbbmalloc2_copyright: {}
+  libtbbmalloc2_copyright:
 
 slices:
   libs:

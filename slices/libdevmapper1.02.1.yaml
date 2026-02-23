@@ -1,7 +1,7 @@
 package: libdevmapper1.02.1
 
 essential:
-  libdevmapper1.02.1_copyright: {}
+  libdevmapper1.02.1_copyright:
 
 slices:
   libs:

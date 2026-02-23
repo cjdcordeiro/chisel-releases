@@ -1,7 +1,7 @@
 package: libzvbi0t64
 
 essential:
-  libzvbi0t64_copyright: {}
+  libzvbi0t64_copyright:
 
 slices:
   libs:

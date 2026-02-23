@@ -1,7 +1,7 @@
 package: sqlite3
 
 essential:
-  sqlite3_copyright: {}
+  sqlite3_copyright:
 
 slices:
   bins:

@@ -1,7 +1,7 @@
 package: libdrm-radeon1
 
 essential:
-  libdrm-radeon1_copyright: {}
+  libdrm-radeon1_copyright:
 
 slices:
   libs:

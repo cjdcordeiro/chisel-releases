@@ -1,7 +1,7 @@
 package: libldap2
 
 essential:
-  libldap2_copyright: {}
+  libldap2_copyright:
 
 slices:
   libs:

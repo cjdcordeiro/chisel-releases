@@ -1,7 +1,7 @@
 package: libdvdnav4
 
 essential:
-  libdvdnav4_copyright: {}
+  libdvdnav4_copyright:
 
 slices:
   libs:

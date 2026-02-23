@@ -1,7 +1,7 @@
 package: libcrypto++8t64
 
 essential:
-  libcrypto++8t64_copyright: {}
+  libcrypto++8t64_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: libgcc-s1
 
 essential:
-  libgcc-s1_copyright: {}
+  libgcc-s1_copyright:
 
 slices:
   libs:

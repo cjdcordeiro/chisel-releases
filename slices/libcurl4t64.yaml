@@ -2,7 +2,7 @@
 package: libcurl4t64
 
 essential:
-  libcurl4t64_copyright: {}
+  libcurl4t64_copyright:
 
 slices:
   libs:

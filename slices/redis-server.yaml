@@ -1,7 +1,7 @@
 package: redis-server
 
 essential:
-  redis-server_copyright: {}
+  redis-server_copyright:
 
 slices:
   bins:

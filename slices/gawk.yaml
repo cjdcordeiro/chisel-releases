@@ -1,7 +1,7 @@
 package: gawk
 
 essential:
-  gawk_copyright: {}
+  gawk_copyright:
 
 slices:
   bins:

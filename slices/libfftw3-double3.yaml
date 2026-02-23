@@ -1,7 +1,7 @@
 package: libfftw3-double3
 
 essential:
-  libfftw3-double3_copyright: {}
+  libfftw3-double3_copyright:
 
 slices:
   libs:

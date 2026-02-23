@@ -1,7 +1,7 @@
 package: libfribidi0
 
 essential:
-  libfribidi0_copyright: {}
+  libfribidi0_copyright:
 
 slices:
   libs:

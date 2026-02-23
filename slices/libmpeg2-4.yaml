@@ -1,7 +1,7 @@
 package: libmpeg2-4
 
 essential:
-  libmpeg2-4_copyright: {}
+  libmpeg2-4_copyright:
 
 slices:
   libs:

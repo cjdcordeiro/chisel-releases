@@ -1,7 +1,7 @@
 package: rabbitmq-server
 
 essential:
-  rabbitmq-server_copyright: {}
+  rabbitmq-server_copyright:
 
 # NOTE: erlang* packages do not exist for i386.
 # The following commented slices should be manually included when cutting the

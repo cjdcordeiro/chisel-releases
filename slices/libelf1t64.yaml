@@ -1,7 +1,7 @@
 package: libelf1t64
 
 essential:
-  libelf1t64_copyright: {}
+  libelf1t64_copyright:
 
 slices:
   libs:

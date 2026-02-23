@@ -1,7 +1,7 @@
 package: libnftnl11
 
 essential:
-  libnftnl11_copyright: {}
+  libnftnl11_copyright:
 
 slices:
   libs:

@@ -9,7 +9,7 @@ package: libpython3.13-minimal
 # The reason is simple, the libraries in this package are tightly
 # dependent upon each other.
 essential:
-  libpython3.13-minimal_copyright: {}
+  libpython3.13-minimal_copyright:
 
 slices:
   config:

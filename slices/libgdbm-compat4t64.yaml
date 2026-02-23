@@ -1,7 +1,7 @@
 package: libgdbm-compat4t64
 
 essential:
-  libgdbm-compat4t64_copyright: {}
+  libgdbm-compat4t64_copyright:
 
 slices:
   libs:

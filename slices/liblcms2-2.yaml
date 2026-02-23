@@ -1,7 +1,7 @@
 package: liblcms2-2
 
 essential:
-  liblcms2-2_copyright: {}
+  liblcms2-2_copyright:
 
 slices:
   libs:

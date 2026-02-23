@@ -1,7 +1,7 @@
 package: apache2-bin
 
 essential:
-  apache2-bin_copyright: {}
+  apache2-bin_copyright:
 
 slices:
 

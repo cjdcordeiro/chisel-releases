@@ -1,7 +1,7 @@
 package: passwd
 
 essential:
-  passwd_copyright: {}
+  passwd_copyright:
 
 slices:
   # Binaries used to manage system users. These rely on configuratiopn

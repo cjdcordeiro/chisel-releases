@@ -1,7 +1,7 @@
 package: libapr1t64
 
 essential:
-  libapr1t64_copyright: {}
+  libapr1t64_copyright:
 
 slices:
   libs:

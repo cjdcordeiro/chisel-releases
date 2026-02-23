@@ -3,7 +3,7 @@
 package: libgpg-error0
 
 essential:
-  libgpg-error0_copyright: {}
+  libgpg-error0_copyright:
 
 slices:
   libs:

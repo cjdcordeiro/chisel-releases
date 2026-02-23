@@ -1,7 +1,7 @@
 package: libwebpmux3
 
 essential:
-  libwebpmux3_copyright: {}
+  libwebpmux3_copyright:
 
 slices:
   libs:

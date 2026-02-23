@@ -1,7 +1,7 @@
 package: libnotify4
 
 essential:
-  libnotify4_copyright: {}
+  libnotify4_copyright:
 
 slices:
   libs:

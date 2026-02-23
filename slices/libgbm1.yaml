@@ -1,7 +1,7 @@
 package: libgbm1
 
 essential:
-  libgbm1_copyright: {}
+  libgbm1_copyright:
 
 slices:
   libs:

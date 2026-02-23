@@ -1,7 +1,7 @@
 package: libp11-kit0
 
 essential:
-  libp11-kit0_copyright: {}
+  libp11-kit0_copyright:
 
 slices:
   libs:

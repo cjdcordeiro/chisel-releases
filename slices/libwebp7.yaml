@@ -1,7 +1,7 @@
 package: libwebp7
 
 essential:
-  libwebp7_copyright: {}
+  libwebp7_copyright:
 
 slices:
   libs:

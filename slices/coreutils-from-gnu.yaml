@@ -1,7 +1,7 @@
 package: coreutils-from-gnu
 
 essential:
-  coreutils-from-gnu_copyright: {}
+  coreutils-from-gnu_copyright:
 
 # This pkg creates the usual coreutils paths as symlinks
 # to the gnu-coreutils

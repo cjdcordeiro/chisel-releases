@@ -1,7 +1,7 @@
 package: libx265-215
 
 essential:
-  libx265-215_copyright: {}
+  libx265-215_copyright:
 
 slices:
   libs:

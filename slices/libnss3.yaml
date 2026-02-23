@@ -7,7 +7,7 @@
 package: libnss3
 
 essential:
-  libnss3_copyright: {}
+  libnss3_copyright:
 
 slices:
   # The libs slice contains all the libraries coming from this package.

@@ -1,7 +1,7 @@
 package: librdkafka++1
 
 essential:
-  librdkafka++1_copyright: {}
+  librdkafka++1_copyright:
 
 slices:
   libs:

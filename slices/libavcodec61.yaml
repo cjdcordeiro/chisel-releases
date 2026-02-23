@@ -1,7 +1,7 @@
 package: libavcodec61
 
 essential:
-  libavcodec61_copyright: {}
+  libavcodec61_copyright:
 
 slices:
   libs:

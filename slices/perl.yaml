@@ -1,7 +1,7 @@
 package: perl
 
 essential:
-  perl_copyright: {}
+  perl_copyright:
 
 slices:
   bins:

@@ -1,7 +1,7 @@
 package: libsodium23
 
 essential:
-  libsodium23_copyright: {}
+  libsodium23_copyright:
 
 slices:
   libs:

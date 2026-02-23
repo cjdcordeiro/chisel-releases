@@ -1,7 +1,7 @@
 package: openjdk-17-jre-headless
 
 essential:
-  openjdk-17-jre-headless_copyright: {}
+  openjdk-17-jre-headless_copyright:
 
 slices:
 

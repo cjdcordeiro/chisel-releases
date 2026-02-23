@@ -1,7 +1,7 @@
 package: libglx0
 
 essential:
-  libglx0_copyright: {}
+  libglx0_copyright:
 
 slices:
   libs:

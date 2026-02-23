@@ -1,7 +1,7 @@
 package: libxshmfence1
 
 essential:
-  libxshmfence1_copyright: {}
+  libxshmfence1_copyright:
 
 slices:
   libs:

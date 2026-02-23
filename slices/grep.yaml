@@ -1,7 +1,7 @@
 package: grep
 
 essential:
-  grep_copyright: {}
+  grep_copyright:
 
 slices:
   bins:

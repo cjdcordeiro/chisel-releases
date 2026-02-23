@@ -1,7 +1,7 @@
 package: libperl5.40
 
 essential:
-  libperl5.40_copyright: {}
+  libperl5.40_copyright:
 
 slices:
   bins:

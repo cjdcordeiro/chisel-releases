@@ -2,7 +2,7 @@
 package: libgnutls30t64
 
 essential:
-  libgnutls30t64_copyright: {}
+  libgnutls30t64_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: cpp-13-aarch64-linux-gnu
 
 essential:
-  cpp-13-aarch64-linux-gnu_copyright: {}
+  cpp-13-aarch64-linux-gnu_copyright:
 
 slices:
   cc1:

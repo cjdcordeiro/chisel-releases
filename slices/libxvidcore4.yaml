@@ -1,7 +1,7 @@
 package: libxvidcore4
 
 essential:
-  libxvidcore4_copyright: {}
+  libxvidcore4_copyright:
 
 slices:
   libs:

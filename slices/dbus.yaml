@@ -1,7 +1,7 @@
 package: dbus
 
 essential:
-  dbus_copyright: {}
+  dbus_copyright:
 
 slices:
   bins:

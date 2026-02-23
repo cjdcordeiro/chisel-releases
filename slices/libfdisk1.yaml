@@ -1,7 +1,7 @@
 package: libfdisk1
 
 essential:
-  libfdisk1_copyright: {}
+  libfdisk1_copyright:
 
 slices:
   libs:

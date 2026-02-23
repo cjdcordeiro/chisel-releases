@@ -1,7 +1,7 @@
 package: erlang-ssl
 
 essential:
-  erlang-ssl_copyright: {}
+  erlang-ssl_copyright:
 
 slices:
   modules:

@@ -1,7 +1,7 @@
 package: libllvm17t64
 
 essential:
-  libllvm17t64_copyright: {}
+  libllvm17t64_copyright:
 
 slices:
   libs:

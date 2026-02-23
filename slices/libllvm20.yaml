@@ -1,7 +1,7 @@
 package: libllvm20
 
 essential:
-  libllvm20_copyright: {}
+  libllvm20_copyright:
 
 slices:
   libs:

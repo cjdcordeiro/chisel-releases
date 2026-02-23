@@ -1,7 +1,7 @@
 package: sbsigntool
 
 essential:
-  sbsigntool_copyright: {}
+  sbsigntool_copyright:
 
 slices:
   bins:

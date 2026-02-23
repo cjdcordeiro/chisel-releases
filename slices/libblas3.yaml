@@ -1,7 +1,7 @@
 package: libblas3
 
 essential:
-  libblas3_copyright: {}
+  libblas3_copyright:
 
 slices:
   libs:

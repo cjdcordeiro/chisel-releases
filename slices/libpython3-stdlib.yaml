@@ -1,7 +1,7 @@
 package: libpython3-stdlib
 
 essential:
-  libpython3-stdlib_copyright: {}
+  libpython3-stdlib_copyright:
 
 slices:
   core:

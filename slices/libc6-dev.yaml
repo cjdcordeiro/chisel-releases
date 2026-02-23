@@ -1,7 +1,7 @@
 package: libc6-dev
 
 essential:
-  libc6-dev_copyright: {}
+  libc6-dev_copyright:
 
 slices:
   # The main library slice, including the core runtime and most-common

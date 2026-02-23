@@ -1,7 +1,7 @@
 package: libudfread3
 
 essential:
-  libudfread3_copyright: {}
+  libudfread3_copyright:
 
 slices:
   libs:

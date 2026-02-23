@@ -1,7 +1,7 @@
 package: ruby
 
 essential:
-  ruby_copyright: {}
+  ruby_copyright:
 
 slices:
   # Leaving ruby-rubygems out of the core installation.

@@ -1,7 +1,7 @@
 package: libogg0
 
 essential:
-  libogg0_copyright: {}
+  libogg0_copyright:
 
 slices:
   libs:

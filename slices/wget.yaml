@@ -1,7 +1,7 @@
 package: wget
 
 essential:
-  wget_copyright: {}
+  wget_copyright:
 
 slices:
   bins:

@@ -1,7 +1,7 @@
 package: libicu76
 
 essential:
-  libicu76_copyright: {}
+  libicu76_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: libexif12
 
 essential:
-  libexif12_copyright: {}
+  libexif12_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: patch
 
 essential:
-  patch_copyright: {}
+  patch_copyright:
 
 slices:
   bins:

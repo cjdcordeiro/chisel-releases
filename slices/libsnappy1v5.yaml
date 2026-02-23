@@ -1,7 +1,7 @@
 package: libsnappy1v5
 
 essential:
-  libsnappy1v5_copyright: {}
+  libsnappy1v5_copyright:
 
 slices:
   libs:

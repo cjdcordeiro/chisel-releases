@@ -1,7 +1,7 @@
 package: libjpeg-turbo8
 
 essential:
-  libjpeg-turbo8_copyright: {}
+  libjpeg-turbo8_copyright:
 
 slices:
   libs:

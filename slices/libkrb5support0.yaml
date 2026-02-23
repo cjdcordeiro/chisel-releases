@@ -1,7 +1,7 @@
 package: libkrb5support0
 
 essential:
-  libkrb5support0_copyright: {}
+  libkrb5support0_copyright:
 
 slices:
   libs:

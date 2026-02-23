@@ -1,7 +1,7 @@
 package: secureboot-db
 
 essential:
-  secureboot-db_copyright: {}
+  secureboot-db_copyright:
 
 slices:
   data:

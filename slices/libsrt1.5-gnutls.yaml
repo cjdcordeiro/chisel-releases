@@ -1,7 +1,7 @@
 package: libsrt1.5-gnutls
 
 essential:
-  libsrt1.5-gnutls_copyright: {}
+  libsrt1.5-gnutls_copyright:
 
 slices:
   libs:

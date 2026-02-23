@@ -1,7 +1,7 @@
 package: libdrm2
 
 essential:
-  libdrm2_copyright: {}
+  libdrm2_copyright:
 
 slices:
   libs:

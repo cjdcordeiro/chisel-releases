@@ -1,7 +1,7 @@
 package: libedit2
 
 essential:
-  libedit2_copyright: {}
+  libedit2_copyright:
 
 slices:
   libs:

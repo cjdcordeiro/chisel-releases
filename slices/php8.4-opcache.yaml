@@ -1,7 +1,7 @@
 package: php8.4-opcache
 
 essential:
-  php8.4-opcache_copyright: {}
+  php8.4-opcache_copyright:
 
 slices:
   cli-module:

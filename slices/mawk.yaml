@@ -1,7 +1,7 @@
 package: mawk
 
 essential:
-  mawk_copyright: {}
+  mawk_copyright:
 
 slices:
   bins:

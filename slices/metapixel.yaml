@@ -2,7 +2,7 @@
 package: metapixel
 
 essential:
-  metapixel_copyright: {}
+  metapixel_copyright:
 
 slices:
   bins:

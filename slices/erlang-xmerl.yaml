@@ -1,7 +1,7 @@
 package: erlang-xmerl
 
 essential:
-  erlang-xmerl_copyright: {}
+  erlang-xmerl_copyright:
 
 slices:
   modules:

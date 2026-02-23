@@ -1,7 +1,7 @@
 ﻿package: libsasl2-2
 
 essential:
-  libsasl2-2_copyright: {}
+  libsasl2-2_copyright:
 
 slices:
   libs:

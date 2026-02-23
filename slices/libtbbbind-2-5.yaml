@@ -1,7 +1,7 @@
 package: libtbbbind-2-5
 
 essential:
-  libtbbbind-2-5_copyright: {}
+  libtbbbind-2-5_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: tomcat10-common
 
 essential:
-  tomcat10-common_copyright: {}
+  tomcat10-common_copyright:
 
 # NOTE: all the jar files in are symlinks
 # to their corresponding jars from libtomcat10-java except

@@ -1,7 +1,7 @@
 package: libgdiplus
 
 essential:
-  libgdiplus_copyright: {}
+  libgdiplus_copyright:
 
 slices:
   libs:

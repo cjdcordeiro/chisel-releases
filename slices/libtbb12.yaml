@@ -1,7 +1,7 @@
 package: libtbb12
 
 essential:
-  libtbb12_copyright: {}
+  libtbb12_copyright:
 
 slices:
   libs:

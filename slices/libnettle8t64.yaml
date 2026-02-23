@@ -1,7 +1,7 @@
 ﻿package: libnettle8t64
 
 essential:
-  libnettle8t64_copyright: {}
+  libnettle8t64_copyright:
 
 slices:
   libs:

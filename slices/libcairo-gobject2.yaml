@@ -1,7 +1,7 @@
 package: libcairo-gobject2
 
 essential:
-  libcairo-gobject2_copyright: {}
+  libcairo-gobject2_copyright:
 
 slices:
   libs:

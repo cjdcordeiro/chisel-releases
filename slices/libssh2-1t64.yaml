@@ -1,7 +1,7 @@
 package: libssh2-1t64
 
 essential:
-  libssh2-1t64_copyright: {}
+  libssh2-1t64_copyright:
 
 slices:
   libs:

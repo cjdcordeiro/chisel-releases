@@ -1,7 +1,7 @@
 package: libatomic1
 
 essential:
-  libatomic1_copyright: {}
+  libatomic1_copyright:
 
 slices:
   libs:

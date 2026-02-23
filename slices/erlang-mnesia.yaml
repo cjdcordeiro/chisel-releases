@@ -1,7 +1,7 @@
 package: erlang-mnesia
 
 essential:
-  erlang-mnesia_copyright: {}
+  erlang-mnesia_copyright:
 
 slices:
   modules:

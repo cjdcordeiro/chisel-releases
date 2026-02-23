@@ -1,7 +1,7 @@
 package: libopenjp2-7
 
 essential:
-  libopenjp2-7_copyright: {}
+  libopenjp2-7_copyright:
 
 slices:
   libs:

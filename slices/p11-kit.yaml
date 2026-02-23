@@ -1,7 +1,7 @@
 package: p11-kit
 
 essential:
-  p11-kit_copyright: {}
+  p11-kit_copyright:
 
 slices:
   bins:

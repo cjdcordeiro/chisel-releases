@@ -1,7 +1,7 @@
 package: libxcb-glx0
 
 essential:
-  libxcb-glx0_copyright: {}
+  libxcb-glx0_copyright:
 
 slices:
   libs:

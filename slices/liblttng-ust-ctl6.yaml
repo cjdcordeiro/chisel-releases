@@ -1,7 +1,7 @@
 package: liblttng-ust-ctl6
 
 essential:
-  liblttng-ust-ctl6_copyright: {}
+  liblttng-ust-ctl6_copyright:
 
 slices:
   libs:

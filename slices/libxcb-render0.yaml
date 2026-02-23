@@ -1,7 +1,7 @@
 package: libxcb-render0
 
 essential:
-  libxcb-render0_copyright: {}
+  libxcb-render0_copyright:
 
 slices:
   libs:

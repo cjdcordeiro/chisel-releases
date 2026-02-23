@@ -1,7 +1,7 @@
 package: libunwind8
 
 essential:
-  libunwind8_copyright: {}
+  libunwind8_copyright:
 
 slices:
   libs:

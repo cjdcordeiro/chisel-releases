@@ -1,7 +1,7 @@
 package: librist4
 
 essential:
-  librist4_copyright: {}
+  librist4_copyright:
 
 slices:
   libs:

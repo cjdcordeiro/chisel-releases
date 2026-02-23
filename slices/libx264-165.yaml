@@ -1,7 +1,7 @@
 package: libx264-165
 
 essential:
-  libx264-165_copyright: {}
+  libx264-165_copyright:
 
 slices:
   libs:

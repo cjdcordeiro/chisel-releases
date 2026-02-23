@@ -1,7 +1,7 @@
 package: mesa-libgallium
 
 essential:
-  mesa-libgallium_copyright: {}
+  mesa-libgallium_copyright:
 
 slices:
   libs:

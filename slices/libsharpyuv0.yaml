@@ -1,7 +1,7 @@
 package: libsharpyuv0
 
 essential:
-  libsharpyuv0_copyright: {}
+  libsharpyuv0_copyright:
 
 slices:
   libs:

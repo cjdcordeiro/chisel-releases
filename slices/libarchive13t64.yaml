@@ -1,7 +1,7 @@
 package: libarchive13t64
 
 essential:
-  libarchive13t64_copyright: {}
+  libarchive13t64_copyright:
 
 slices:
   libs:

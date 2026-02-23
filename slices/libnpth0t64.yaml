@@ -1,7 +1,7 @@
 package: libnpth0t64
 
 essential:
-  libnpth0t64_copyright: {}
+  libnpth0t64_copyright:
 
 slices:
   libs:

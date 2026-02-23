@@ -1,7 +1,7 @@
 package: libasan8
 
 essential:
-  libasan8_copyright: {}
+  libasan8_copyright:
 
 slices:
   libs:

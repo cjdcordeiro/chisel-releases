@@ -1,7 +1,7 @@
 package: libva-x11-2
 
 essential:
-  libva-x11-2_copyright: {}
+  libva-x11-2_copyright:
 
 slices:
   libs:

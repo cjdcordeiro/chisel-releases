@@ -1,7 +1,7 @@
 package: binutils-x86-64-linux-gnu
 
 essential:
-  binutils-x86-64-linux-gnu_copyright: {}
+  binutils-x86-64-linux-gnu_copyright:
 
 slices:
   # NOTE: You might want to create a symlink from /usr/bin/as to

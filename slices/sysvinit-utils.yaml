@@ -1,7 +1,7 @@
 package: sysvinit-utils
 
 essential:
-  sysvinit-utils_copyright: {}
+  sysvinit-utils_copyright:
 
 slices:
   bins:

@@ -1,7 +1,7 @@
 package: libzstd1
 
 essential:
-  libzstd1_copyright: {}
+  libzstd1_copyright:
 
 slices:
   libs:

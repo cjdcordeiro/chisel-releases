@@ -2,7 +2,7 @@
 package: libhogweed6t64
 
 essential:
-  libhogweed6t64_copyright: {}
+  libhogweed6t64_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: libcom-err2
 
 essential:
-  libcom-err2_copyright: {}
+  libcom-err2_copyright:
 
 slices:
   libs:

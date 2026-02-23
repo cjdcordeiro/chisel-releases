@@ -1,7 +1,7 @@
 package: libtasn1-6
 
 essential:
-  libtasn1-6_copyright: {}
+  libtasn1-6_copyright:
 
 slices:
   libs:

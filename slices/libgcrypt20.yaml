@@ -2,7 +2,7 @@
 package: libgcrypt20
 
 essential:
-  libgcrypt20_copyright: {}
+  libgcrypt20_copyright:
 
 slices:
   libs:

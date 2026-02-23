@@ -4,7 +4,7 @@
 package: libpsl5t64
 
 essential:
-  libpsl5t64_copyright: {}
+  libpsl5t64_copyright:
 
 slices:
   libs:

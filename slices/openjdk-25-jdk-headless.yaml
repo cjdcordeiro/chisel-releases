@@ -1,7 +1,7 @@
 package: openjdk-25-jdk-headless
 
 essential:
-  openjdk-25-jdk-headless_copyright: {}
+  openjdk-25-jdk-headless_copyright:
 
 slices:
   # OpenJDK binaries slice. The tools provided here are front-ends

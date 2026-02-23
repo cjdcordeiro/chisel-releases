@@ -1,7 +1,7 @@
 package: libgdbm6t64
 
 essential:
-  libgdbm6t64_copyright: {}
+  libgdbm6t64_copyright:
 
 slices:
   libs:

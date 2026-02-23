@@ -1,7 +1,7 @@
 package: libvpx11
 
 essential:
-  libvpx11_copyright: {}
+  libvpx11_copyright:
 
 slices:
   libs:

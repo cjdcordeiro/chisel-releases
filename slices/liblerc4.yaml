@@ -1,7 +1,7 @@
 package: liblerc4
 
 essential:
-  liblerc4_copyright: {}
+  liblerc4_copyright:
 
 slices:
   libs:

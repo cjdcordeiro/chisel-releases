@@ -1,7 +1,7 @@
 package: libglvnd0
 
 essential:
-  libglvnd0_copyright: {}
+  libglvnd0_copyright:
 
 slices:
   libs:

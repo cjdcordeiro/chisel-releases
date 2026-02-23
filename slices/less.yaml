@@ -1,7 +1,7 @@
 package: less
 
 essential:
-  less_copyright: {}
+  less_copyright:
 
 slices:
   bins:

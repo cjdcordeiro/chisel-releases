@@ -1,7 +1,7 @@
 package: libsvtav1enc2
 
 essential:
-  libsvtav1enc2_copyright: {}
+  libsvtav1enc2_copyright:
 
 slices:
   libs:

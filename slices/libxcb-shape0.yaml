@@ -1,7 +1,7 @@
 package: libxcb-shape0
 
 essential:
-  libxcb-shape0_copyright: {}
+  libxcb-shape0_copyright:
 
 slices:
   libs:

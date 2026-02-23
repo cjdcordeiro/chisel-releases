@@ -1,7 +1,7 @@
 package: libgl1-mesa-dri
 
 essential:
-  libgl1-mesa-dri_copyright: {}
+  libgl1-mesa-dri_copyright:
 
 slices:
   libs:

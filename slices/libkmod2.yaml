@@ -1,7 +1,7 @@
 package: libkmod2
 
 essential:
-  libkmod2_copyright: {}
+  libkmod2_copyright:
 
 slices:
   libs:

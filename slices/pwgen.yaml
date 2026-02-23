@@ -1,7 +1,7 @@
 package: pwgen
 
 essential:
-  pwgen_copyright: {}
+  pwgen_copyright:
 
 slices:
   bins:

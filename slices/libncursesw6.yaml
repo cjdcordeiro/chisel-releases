@@ -1,7 +1,7 @@
 package: libncursesw6
 
 essential:
-  libncursesw6_copyright: {}
+  libncursesw6_copyright:
 
 slices:
   libs:

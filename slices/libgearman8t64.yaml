@@ -1,7 +1,7 @@
 package: libgearman8t64
 
 essential:
-  libgearman8t64_copyright: {}
+  libgearman8t64_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: libsepol2
 
 essential:
-  libsepol2_copyright: {}
+  libsepol2_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: x11-common
 
 essential:
-  x11-common_copyright: {}
+  x11-common_copyright:
 
 slices:
   resources:

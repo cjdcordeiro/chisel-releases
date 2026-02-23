@@ -1,7 +1,7 @@
 package: xfonts-utils
 
 essential:
-  xfonts-utils_copyright: {}
+  xfonts-utils_copyright:
 
 slices:
   bins:

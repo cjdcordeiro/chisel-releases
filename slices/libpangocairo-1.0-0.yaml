@@ -1,7 +1,7 @@
 package: libpangocairo-1.0-0
 
 essential:
-  libpangocairo-1.0-0_copyright: {}
+  libpangocairo-1.0-0_copyright:
 
 slices:
   libs:

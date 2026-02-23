@@ -1,7 +1,7 @@
 package: libnspr4
 
 essential:
-  libnspr4_copyright: {}
+  libnspr4_copyright:
 
 slices:
   libs:

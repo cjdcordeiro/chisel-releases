@@ -1,7 +1,7 @@
 package: libnghttp2-14
 
 essential:
-  libnghttp2-14_copyright: {}
+  libnghttp2-14_copyright:
 
 slices:
   libs:

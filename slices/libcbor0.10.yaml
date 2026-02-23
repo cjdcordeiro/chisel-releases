@@ -1,7 +1,7 @@
 package: libcbor0.10
 
 essential:
-  libcbor0.10_copyright: {}
+  libcbor0.10_copyright:
 
 slices:
   libs:

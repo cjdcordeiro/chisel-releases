@@ -1,7 +1,7 @@
 package: fonts-noto-core
 
 essential:
-  fonts-noto-core_copyright: {}
+  fonts-noto-core_copyright:
 
 slices:
   fonts:

@@ -1,7 +1,7 @@
 package: hello
 
 essential:
-  hello_copyright: {}
+  hello_copyright:
 
 slices:
   bins:

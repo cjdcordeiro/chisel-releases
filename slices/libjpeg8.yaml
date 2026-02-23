@@ -3,7 +3,7 @@
 package: libjpeg8
 
 essential:
-  libjpeg8_copyright: {}
+  libjpeg8_copyright:
 
 slices:
   libs:

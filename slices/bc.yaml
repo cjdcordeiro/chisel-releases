@@ -1,7 +1,7 @@
 package: bc
 
 essential:
-  bc_copyright: {}
+  bc_copyright:
 
 slices:
   bins:

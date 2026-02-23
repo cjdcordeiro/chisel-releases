@@ -1,7 +1,7 @@
 package: libpython3.13-stdlib
 
 essential:
-  libpython3.13-stdlib_copyright: {}
+  libpython3.13-stdlib_copyright:
 
 # The slices in this package have been grouped with inspiration from the
 # Python 3.13 Standard Library

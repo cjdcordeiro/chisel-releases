@@ -1,7 +1,7 @@
 package: mount
 
 essential:
-  mount_copyright: {}
+  mount_copyright:
 
 slices:
   bins:

@@ -1,7 +1,7 @@
 package: php8.4-cli
 
 essential:
-  php8.4-cli_copyright: {}
+  php8.4-cli_copyright:
 
 slices:
   core:

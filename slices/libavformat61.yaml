@@ -1,7 +1,7 @@
 package: libavformat61
 
 essential:
-  libavformat61_copyright: {}
+  libavformat61_copyright:
 
 slices:
   libs:

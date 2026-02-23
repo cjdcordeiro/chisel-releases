@@ -1,7 +1,7 @@
 package: libxext6
 
 essential:
-  libxext6_copyright: {}
+  libxext6_copyright:
 
 slices:
   libs:

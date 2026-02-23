@@ -1,7 +1,7 @@
 package: libacl1
 
 essential:
-  libacl1_copyright: {}
+  libacl1_copyright:
 
 slices:
   libs:

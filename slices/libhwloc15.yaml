@@ -1,7 +1,7 @@
 package: libhwloc15
 
 essential:
-  libhwloc15_copyright: {}
+  libhwloc15_copyright:
 
 slices:
   libs:

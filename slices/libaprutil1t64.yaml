@@ -1,7 +1,7 @@
 package: libaprutil1t64
 
 essential:
-  libaprutil1t64_copyright: {}
+  libaprutil1t64_copyright:
 
 slices:
   libs:

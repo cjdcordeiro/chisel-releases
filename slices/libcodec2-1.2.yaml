@@ -1,7 +1,7 @@
 package: libcodec2-1.2
 
 essential:
-  libcodec2-1.2_copyright: {}
+  libcodec2-1.2_copyright:
 
 slices:
   libs:

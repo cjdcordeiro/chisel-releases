@@ -1,7 +1,7 @@
 package: jq
 
 essential:
-  jq_copyright: {}
+  jq_copyright:
 
 slices:
   bins:

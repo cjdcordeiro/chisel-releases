@@ -1,7 +1,7 @@
 package: libharfbuzz0b
 
 essential:
-  libharfbuzz0b_copyright: {}
+  libharfbuzz0b_copyright:
 
 slices:
   libs:

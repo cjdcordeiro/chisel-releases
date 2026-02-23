@@ -2,7 +2,7 @@
 package: libgif7
 
 essential:
-  libgif7_copyright: {}
+  libgif7_copyright:
 
 slices:
   libs:

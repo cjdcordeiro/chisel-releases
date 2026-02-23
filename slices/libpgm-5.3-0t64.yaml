@@ -1,7 +1,7 @@
 package: libpgm-5.3-0t64
 
 essential:
-  libpgm-5.3-0t64_copyright: {}
+  libpgm-5.3-0t64_copyright:
 
 slices:
   libs:

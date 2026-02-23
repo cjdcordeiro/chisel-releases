@@ -1,7 +1,7 @@
 package: libcdio19t64
 
 essential:
-  libcdio19t64_copyright: {}
+  libcdio19t64_copyright:
 
 slices:
   libs:

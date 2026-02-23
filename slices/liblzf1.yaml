@@ -1,7 +1,7 @@
 package: liblzf1
 
 essential:
-  liblzf1_copyright: {}
+  liblzf1_copyright:
 
 slices:
   libs:

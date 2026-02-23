@@ -1,7 +1,7 @@
 package: libxcb-xfixes0
 
 essential:
-  libxcb-xfixes0_copyright: {}
+  libxcb-xfixes0_copyright:
 
 slices:
   libs:

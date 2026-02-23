@@ -1,7 +1,7 @@
 package: erlang-eldap
 
 essential:
-  erlang-eldap_copyright: {}
+  erlang-eldap_copyright:
 
 slices:
   modules:

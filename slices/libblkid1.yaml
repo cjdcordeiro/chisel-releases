@@ -1,7 +1,7 @@
 package: libblkid1
 
 essential:
-  libblkid1_copyright: {}
+  libblkid1_copyright:
 
 slices:
   libs:

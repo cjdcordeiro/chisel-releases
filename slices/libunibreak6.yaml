@@ -1,7 +1,7 @@
 package: libunibreak6
 
 essential:
-  libunibreak6_copyright: {}
+  libunibreak6_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: gcc-x86-64-linux-gnu
 
 essential:
-  gcc-x86-64-linux-gnu_copyright: {}
+  gcc-x86-64-linux-gnu_copyright:
 
 slices:
   gcc:

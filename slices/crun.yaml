@@ -1,7 +1,7 @@
 package: crun
 
 essential:
-  crun_copyright: {}
+  crun_copyright:
 
 slices:
   bins:

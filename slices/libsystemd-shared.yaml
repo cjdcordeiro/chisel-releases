@@ -1,7 +1,7 @@
 package: libsystemd-shared
 
 essential:
-  libsystemd-shared_copyright: {}
+  libsystemd-shared_copyright:
 
 slices:
   libs:

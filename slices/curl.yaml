@@ -1,7 +1,7 @@
 package: curl
 
 essential:
-  curl_copyright: {}
+  curl_copyright:
 
 slices:
   bins:

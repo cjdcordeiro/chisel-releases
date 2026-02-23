@@ -1,7 +1,7 @@
 package: libgcc-15-dev
 
 essential:
-  libgcc-15-dev_copyright: {}
+  libgcc-15-dev_copyright:
 
 slices:
   # Runtime objects for linking with gcc-15

@@ -1,7 +1,7 @@
 package: libtirpc3t64
 
 essential:
-  libtirpc3t64_copyright: {}
+  libtirpc3t64_copyright:
 
 slices:
   libs:

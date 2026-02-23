@@ -1,7 +1,7 @@
 package: liblmdb0
 
 essential:
-  liblmdb0_copyright: {}
+  liblmdb0_copyright:
 
 slices:
   libs:

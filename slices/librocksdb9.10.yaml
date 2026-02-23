@@ -1,7 +1,7 @@
 package: librocksdb9.10
 
 essential:
-  librocksdb9.10_copyright: {}
+  librocksdb9.10_copyright:
 
 slices:
   libs:

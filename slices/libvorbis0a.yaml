@@ -1,7 +1,7 @@
 package: libvorbis0a
 
 essential:
-  libvorbis0a_copyright: {}
+  libvorbis0a_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: libarchive-tools
 
 essential:
-  libarchive-tools_copyright: {}
+  libarchive-tools_copyright:
 
 slices:
   bins:

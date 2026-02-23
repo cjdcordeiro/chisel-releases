@@ -1,7 +1,7 @@
 package: apache2
 
 essential:
-  apache2_copyright: {}
+  apache2_copyright:
 
 slices:
   core:

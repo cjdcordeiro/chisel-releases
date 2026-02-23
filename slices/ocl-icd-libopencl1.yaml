@@ -1,7 +1,7 @@
 package: ocl-icd-libopencl1
 
 essential:
-  ocl-icd-libopencl1_copyright: {}
+  ocl-icd-libopencl1_copyright:
 
 slices:
   libs:

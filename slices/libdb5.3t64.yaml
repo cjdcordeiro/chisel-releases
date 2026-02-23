@@ -1,7 +1,7 @@
 package: libdb5.3t64
 
 essential:
-  libdb5.3t64_copyright: {}
+  libdb5.3t64_copyright:
 
 slices:
   libs:

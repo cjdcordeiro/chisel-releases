@@ -1,7 +1,7 @@
 package: python3-pip-whl
 
 essential:
-  python3-pip-whl_copyright: {}
+  python3-pip-whl_copyright:
 
 slices:
   wheels:

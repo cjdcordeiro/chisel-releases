@@ -1,7 +1,7 @@
 package: libsframe3
 
 essential:
-  libsframe3_copyright: {}
+  libsframe3_copyright:
 
 slices:
   libs:

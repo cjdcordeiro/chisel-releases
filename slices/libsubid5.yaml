@@ -1,7 +1,7 @@
 package: libsubid5
 
 essential:
-  libsubid5_copyright: {}
+  libsubid5_copyright:
 
 slices:
   libs:

@@ -1,7 +1,7 @@
 package: nginx-common
 
 essential:
-  nginx-common_copyright: {}
+  nginx-common_copyright:
 
 slices:
   # Leaving the debconf dependency out as we don't currently need pkg mgmt.

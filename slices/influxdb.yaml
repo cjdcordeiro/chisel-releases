@@ -1,7 +1,7 @@
 package: influxdb
 
 essential:
-  influxdb_copyright: {}
+  influxdb_copyright:
 
 slices:
   bins:

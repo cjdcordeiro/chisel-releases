@@ -1,7 +1,7 @@
 package: erlang-asn1
 
 essential:
-  erlang-asn1_copyright: {}
+  erlang-asn1_copyright:
 
 slices:
   libs:

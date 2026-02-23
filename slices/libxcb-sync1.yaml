@@ -1,7 +1,7 @@
 package: libxcb-sync1
 
 essential:
-  libxcb-sync1_copyright: {}
+  libxcb-sync1_copyright:
 
 slices:
   libs:

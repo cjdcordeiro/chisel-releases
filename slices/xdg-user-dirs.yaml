@@ -1,7 +1,7 @@
 package: xdg-user-dirs
 
 essential:
-  xdg-user-dirs_copyright: {}
+  xdg-user-dirs_copyright:
 
 slices:
   config:

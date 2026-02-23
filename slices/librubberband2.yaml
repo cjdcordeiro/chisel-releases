@@ -1,7 +1,7 @@
 package: librubberband2
 
 essential:
-  librubberband2_copyright: {}
+  librubberband2_copyright:
 
 slices:
   libs:

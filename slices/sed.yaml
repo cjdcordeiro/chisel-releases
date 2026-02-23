@@ -1,7 +1,7 @@
 package: sed
 
 essential:
-  sed_copyright: {}
+  sed_copyright:
 
 slices:
   bins:

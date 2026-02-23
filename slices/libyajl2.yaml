@@ -1,7 +1,7 @@
 package: libyajl2
 
 essential:
-  libyajl2_copyright: {}
+  libyajl2_copyright:
 
 slices:
   libs:
