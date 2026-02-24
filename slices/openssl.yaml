@@ -16,7 +16,6 @@ slices:
       /usr/bin/openssl:
 
   # no changes
-  
   config:
     contents:
       # TODO: this is not a config, but data. Remove it for future releases.
