@@ -101,7 +101,8 @@ slices:
 #  ant:
 #    essential:
 #      - tomcat10-common_jars
-#      - libtomcat10-java_ant
+#      tomcat10-common_jars:
+#      libtomcat10-java_ant:
 #    contents:
 #      /usr/share/tomcat10/bin/catalina-tasks.xml:
 #      /usr/share/tomcat10/lib/catalina-ant.jar:
