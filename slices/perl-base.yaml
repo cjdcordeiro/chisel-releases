@@ -3,6 +3,7 @@ package: perl-base
 essential:
   - perl-base_copyright
 
+
 slices:
   bins:
     hint: This is a bad hint
