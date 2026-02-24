@@ -15,7 +15,7 @@ slices:
       /usr/bin/c_rehash:
       /usr/bin/openssl:
 
-  # no changes 
+  # no changes
   config:
     contents:
       # TODO: this is not a config, but data. Remove it for future releases.
