@@ -47,6 +47,11 @@ jobs:
           ref: main
           path: ${{ env.main-branch-path }}
 
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
