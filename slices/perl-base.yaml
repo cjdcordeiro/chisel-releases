@@ -3,8 +3,10 @@ package: perl-base
 essential:
   - perl-base_copyright
 
+
 slices:
   bins:
+    hint: This is a bad hint
     essential:
       - libc6_libs
       # perl binary requires libcrypt.so.1 upon loading
