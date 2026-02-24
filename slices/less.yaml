@@ -20,7 +20,7 @@ slices:
   # is merged for chisel.
   # pager:
   #   essential:
-  #     - less_bins
+  #     less_bins:
   #   contents:
   #     /usr/bin/pager: {symlink: /usr/bin/less}
 
