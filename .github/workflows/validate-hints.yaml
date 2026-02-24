@@ -58,6 +58,10 @@ jobs:
           python-version: "3.12"
           pip-install: -r ${{ env.main-branch-path }}/.github/scripts/validate-hints/requirements.txt
 
+      - run: tree ${{ env.main-branch-path }}/.github
+      - run: tree .
+      - run: cat ${{ env.main-branch-path }}/.github/scripts/validate-hints/requirements.txt
+      
       - name: Validate hints
         env:
           script-dir: "${{ env.main-branch-path }}/.github/scripts/validate-hints"
