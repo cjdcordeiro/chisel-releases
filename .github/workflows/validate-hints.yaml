@@ -52,11 +52,13 @@ jobs:
           ref: ${{ github.head_ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
 
-      - run: tree ${{ env.main-branch-path }}/.github
+      - run: ls *
+      - run: ls ${{ env.main-branch-path }}
+      - run: ls ${{ env.main-branch-path }}/.github/
       - run: tree .
       - run: cat ${{ env.main-branch-path }}/.github/scripts/validate-hints/requirements.txt
 
-      
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
