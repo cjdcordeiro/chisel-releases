@@ -33,12 +33,6 @@ slices:
       /etc/mosquitto/conf.d/:
       /etc/mosquitto/mosquitto.conf:
 
-  # Leaving out:
-  # - ./etc/init.d/mosquitto
-  # - all .example files
-  # - ./usr/lib/systemd/system/mosquitto.service
-  # - ./usr/lib/systemd/user/mosquitto.service
-
   dynamic-security-plugin:
     hint: Plugin library for Dynamic Security
     essential:
