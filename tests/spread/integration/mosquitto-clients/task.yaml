@@ -1,0 +1,9 @@
+summary: Integration tests for mosquitto-clients
+
+execute: |
+  # Chisel a minimum number of slices to give us a runnable system that we can
+  # test in.
+  rootfs="$(install-slices mosquitto-clients_bins)"
+
+  chroot "${rootfs}/" mosquitto_pub --help | head -1
+  chroot "${rootfs}/" mosquitto_sub --help | head -1
