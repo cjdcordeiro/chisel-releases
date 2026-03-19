@@ -1,8 +1,34 @@
 summary: Integration tests for mosquitto
 
 execute: |
-  # Chisel a minimum number of slices to give us a runnable system that we can
-  # test in.
+  # Chisel slices including mosquitto-clients for pub/sub testing
   rootfs="$(install-slices mosquitto_bins)"
 
-  chroot "${rootfs}/" mosquitto -h | head -1
+  # Test mosquitto_ctrl and mosquitto_passwd tools
+  chroot "${rootfs}/" mosquitto_ctrl --help | head -1
+  chroot "${rootfs}/" mosquitto_passwd --help | head -1
+
+  # Test dynamic security plugin is available
+  test -f "${rootfs}/usr/lib/"*"-linux-"*"/mosquitto_dynamic_security.so"
+
+  # Start mosquitto broker in background (default port 1883)
+  chroot "${rootfs}/" mosquitto -d
+
+  # Give it a moment to start
+  sleep 2
+
+  # Test pub/sub functionality
+  # Subscribe in background, wait for one message
+  chroot "${rootfs}/" mosquitto_sub -h localhost -t test/topic -C 1 &
+  SUB_PID=$!
+  sleep 1
+
+  # Publish a test message
+  chroot "${rootfs}/" mosquitto_pub -h localhost -t test/topic -m "hello"
+
+  # Wait for subscriber to receive the message
+  wait $SUB_PID
+
+restore: |
+  # Kill mosquitto broker (default port 1883)
+  kill $(lsof -t -i :1883) 2>/dev/null || true
