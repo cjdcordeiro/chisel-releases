@@ -19,11 +19,11 @@ slices:
       mosquitto_dynamic-security-plugin:
       mosquitto_logs:
     contents:
-      /usr/sbin/mosquitto:
       # For future reference, these binaries can also be put in their own "tools" slice,
       # and depend on libc6_libs, libcjson1_libs. libmosquitto1_libs, libssl3t64_libs
       /usr/bin/mosquitto_ctrl:
       /usr/bin/mosquitto_passwd:
+      /usr/sbin/mosquitto:
 
   config:
     contents:
