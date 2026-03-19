@@ -44,6 +44,10 @@ slices:
     contents:
       /usr/lib/*-linux-*/mosquitto_dynamic_security.so:
 
+  # The postinst script changes the ownership of /var/lib/mosquitto and /var/log/mosquitto
+  # to the mosquitto user. This user doesn't exist at this stage, and it is not created by
+  # mutation scripts, so the "date" and "logs" slices preserve the ownership of these directories
+  # according to the deb.
   data:
     contents:
       /var/lib/mosquitto/:
