@@ -27,7 +27,6 @@ slices:
 
   config:
     contents:
-      /etc/logrotate.d/mosquitto:
       /etc/mosquitto/ca_certificates/:
       /etc/mosquitto/certs/:
       /etc/mosquitto/conf.d/:
