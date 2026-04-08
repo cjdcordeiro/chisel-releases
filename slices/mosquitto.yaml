@@ -39,8 +39,6 @@ slices:
       libc6_libs:
       libcjson1_libs:
       libssl3t64_libs:
-      libzstd1_libs:
-      zlib1g_libs:
     contents:
       /usr/lib/*-linux-*/mosquitto_dynamic_security.so:
 

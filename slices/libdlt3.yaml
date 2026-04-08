@@ -10,6 +10,7 @@ slices:
       zlib1g_libs:
     contents:
       /usr/lib/*-linux-*/libdlt.so.3*:
+      /usr/lib/*-linux-*/libdlt_daemon.so.3*:
 
   copyright:
     contents:

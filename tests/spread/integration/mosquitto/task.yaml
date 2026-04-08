@@ -7,7 +7,7 @@ execute: |
   rootfs="$(install-slices mosquitto_bins)"
 
   echo "Ensure the dynamic security plugin is available"
-  chroot "${rootfs}/" mosquitto_ctrl --help | MATCH "dynsec"
+  chroot "$rootfs" mosquitto_ctrl --help | MATCH "dynsec"
   chroot "${rootfs}/" mosquitto_ctrl dynsec help
 
   echo "Ensure the dynsec plugin is functional"
@@ -19,11 +19,13 @@ execute: |
   test ! -f "${rootfs}/tmp/passwd"
   chroot "${rootfs}/" mosquitto_passwd -c -b /tmp/passwd testuser testpassword
   test -f "${rootfs}/tmp/passwd"
-  [[ "$(cat ${rootfs}/tmp/passwd)" = "USER:"* ]]
+  [[ "$(cat "$rootfs/tmp/passwd")" = "USER:"* ]]
 
   # Start mosquitto broker in background, needs /dev
   mkdir -p "${rootfs}/dev"
   mount --bind /dev "${rootfs}/dev"
+  trap "umount $rootfs/dev || true" EXIT
+
   # Force using the the root user
   echo "user root" >> "${rootfs}/etc/mosquitto/mosquitto.conf"
   echo "Starting mosquitto broker in background"

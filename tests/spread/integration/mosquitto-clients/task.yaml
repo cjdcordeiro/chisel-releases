@@ -7,6 +7,7 @@ execute: |
   # Start mosquitto broker in background, needs /dev
   mkdir -p "${rootfs}/dev"
   mount --bind /dev "${rootfs}/dev"
+  trap "umount ${rootfs}/dev || true" EXIT
   # Force using the the root user
   echo "user root" >> "${rootfs}/etc/mosquitto/mosquitto.conf"
   echo "Starting mosquitto broker in background"
@@ -20,7 +21,7 @@ execute: |
   sleep 1
 
   # Publish a test message
-  chroot "${rootfs}/" mosquitto_pub -h 127.0.0.1 -t test/topic -m "hello, i am a test"
+  chroot "$rootfs" mosquitto_pub -h 127.0.0.1 -t test/topic -m "hello, i am a test"
 
   # Wait for subscriber
   wait $SUB_PID
